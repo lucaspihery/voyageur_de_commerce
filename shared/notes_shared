@@ -1,0 +1,24 @@
+Pour inclure des fichiers se trouvant dans le dossier shared :
+
+1 - Projet.pro :
+================
+SHARED_FOLDER = ../shared
+
+SOURCES += \
+    fenetreprincipale.cpp \
+    axe.cpp \
+    $$SHARED_FOLDER/lcdrange.cpp \
+    moncanvas.cpp \
+    #mainConsole.cpp \
+    main.cpp
+
+HEADERS += \
+    fenetreprincipale.h \
+    axe.h \
+    $$SHARED_FOLDER/lcdrange.h \
+    moncanvas.h
+    
+2 - Fichiers utilisant ces bibliothèques :
+==========================================
+#include "../shared/lcdrange.h"
+
